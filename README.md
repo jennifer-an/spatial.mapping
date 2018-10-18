@@ -6,7 +6,7 @@
 library(spatial.mapping)
 library(rgdal)
 
-#read the files
+#read files
 postcode_dat <- readOGR(".../POA_2016_AUST")
 sa2_dat <- readOGR(".../SA2_2016_AUST")
 
