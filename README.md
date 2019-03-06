@@ -1,15 +1,20 @@
 # spatial.mapping
 
-## Example
+## example of use
 
+Install R package:
 ```R
+devtools::install_github("jennifer-an/spatial.mapping")
 library(spatial.mapping)
+```
 
-#read files
-postcode_dat <- readOGR(".../POA_2016_AUST")
-sa2_dat <- readOGR(".../SA2_2016_AUST")
+Read shape files:
+```R
+postcode_dat <- rgdal::readOGR(".../POA_2016_AUST")
+sa2_dat <- rgdal::readOGR(".../SA2_2016_AUST")
+```
 
-#run code
-run_spatial_mapping(sp1=postcode_dat, sp2=sa2_dat, sp1_name="POA_CODE16", sp2_name="SA2_MAIN16")
-
+Run code:
+```R
+run_spatial_mapping(sp1 = postcode_dat, sp2 = sa2_dat, sp1_name = "POA_CODE16", sp2_name = "SA2_MAIN16")
 ```
